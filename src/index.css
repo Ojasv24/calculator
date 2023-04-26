@@ -1,13 +1,114 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* take full screen */
+  height: 100vh;
+  width: 100%;
+}
+
+.App .selection {
+  flex: 1;
+  background-color: green;
+  height: 100vh;
+  width: 100%;
+}
+
+.App .main {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  background-color: rgb(18, 18, 18);
+  padding: 50px;
+}
+
+.heading {
+  color: white;
+  font-size: xx-large;
+  font-weight: bold;
+  padding: 20px;
+  background-color: rgb(18, 18, 18);
+  text-align: center;
+}
+
+.calulator {
+  padding: 10px;
+  font-size: xx-large;
+  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(1rem, 1fr));
+  row-gap: 2px;
+  column-gap: 2px;
+}
+
+.btn.btn-dark {
+  background-color: rgb(187, 134, 252);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn.btn-dark.big {
+  grid-column: span 2;
+  background-color: rgb(187, 134, 252);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.valueDiv {
+  grid-column: span 4;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  display: flex;
+  text-align: end;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+.col-sm-2.col-form-label {
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scrollbar-width: none;
+}
+
+.col-sm-2.col-form-label::-webkit-scrollbar {
+  display: none;
+}
+
+/* recent CAl */
+
+.recentCalHeading {
+  align-self: center;
+  color: rgb(255, 183, 0);
+  font-size: large;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.recentCal {
+  color: white;
+  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  align-items: center;
 }
